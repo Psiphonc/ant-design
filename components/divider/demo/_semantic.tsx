@@ -25,20 +25,30 @@ const Block: React.FC<DividerProps> = (props) => {
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi
         ista probare, quae sunt a te dicta? Refert tamen, quo modo.
       </p>
-      <Divider {...props}>Text</Divider>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi
-        ista probare, quae sunt a te dicta? Refert tamen, quo modo.
-      </p>
-      <Divider orientation="left" {...props}>
-        Left Text
+      <Divider {...props} styles={{ rail: { borderBlockStart: '1px solid #7cb305' } }}>
+        Solid
       </Divider>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi
         ista probare, quae sunt a te dicta? Refert tamen, quo modo.
       </p>
-      <Divider orientation="right" {...props}>
-        Right Text
+      <Divider
+        orientation="left"
+        {...props}
+        styles={{ rail: { borderBlockStart: '1px dotted #7cb305' } }}
+      >
+        Dotted
+      </Divider>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi
+        ista probare, quae sunt a te dicta? Refert tamen, quo modo.
+      </p>
+      <Divider
+        orientation="right"
+        {...props}
+        styles={{ rail: { borderBlockStart: '1px dashed #7cb305' } }}
+      >
+        Dashed
       </Divider>
     </div>
   );

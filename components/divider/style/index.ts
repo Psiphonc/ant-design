@@ -115,17 +115,18 @@ const genSharedDividerStyle: GenerateStyle<DividerToken> = (token): CSSObject =>
         [`${rail}-wrapper`]: {
           display: 'flex',
           width: '100%',
+          height: '100%',
+          alignItems: 'center',
           borderBlockStart: 'inherit',
         },
 
         [`${rail}-start, ${rail}-end`]: {
-          position: 'relative',
           width: '50%',
           borderBlockStart: `${unit(lineWidth)} solid transparent`,
           // Chrome not accept `inherit` in `border-top`
           borderBlockStartColor: 'inherit',
           borderBlockEnd: 0,
-          transform: 'translateY(50%)',
+          height: unit(lineWidth),
           content: "''",
         },
       },
